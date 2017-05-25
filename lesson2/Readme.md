@@ -9,7 +9,7 @@
 
 Для цього класу створити метод doubleHit, який буде викликати наслідуваний метод __“hit”__, і передавати туди подвоєне значення __“point”__.
 
-Від обох класів породити по екземпляру відповідно __fighter, improvedFighter.
+Від обох класів породити по екземпляру відповідно __fighter, improvedFighter__.
 
 ### Створити функцію fight, яка прийматиме параметри - fighter, improvedFighter, і point.
 
@@ -17,4 +17,4 @@ __fight__ може приймати довільну кількість пара
 
 Ця функція запускатиме процес гри: гравці по черзі наносять удар один одному за допомогою методу __hit__, що приймає відповідне значення __point__. Якщо один із них помирає __(health = 0)__, то гра закінчується і результат виводиться в консоль.
 
-При виконанні домашнього завдання необхідно використати:__ - block scoping (let) - spread / rest operator - default settings - string interpolation - arrow functions - classes + inheritance + super
+При виконанні домашнього завдання необхідно використати: __- block scoping (let) - spread / rest operator - default settings - string interpolation - arrow functions - classes + inheritance + super__
