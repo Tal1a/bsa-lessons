@@ -4,31 +4,29 @@
 }
 
 header {
-    display: flex;   /*робить елемент флекс боксом для чайдлів хідера*/
-    flex-direction: row;  /* напрямок рядок*/
-    flex-wrap: nowrap;  /* перенесення тексту*/
+    display: flex; /*робить елемент флекс боксом для чайдлів хідера*/
+    flex-direction: row; /* напрямок рядок*/
+    flex-wrap: nowrap; /* перенесення тексту*/
     justify-content: space-between;
     margin: 10pt;
     /* */
 }
 
-
 header .menu {
     order: 2;
 }
 
-
 header .menu ul {
-    list-style-type: none;      /*Отменяет маркеры для списка.*/
-    display: flex;     /*для li*/
+    list-style-type: none; /*Отменяет маркеры для списка.*/
+    display: flex; /*для li*/
     background-color: antiquewhite;
 }
 
 header .menu ul li {
     padding: 15pt;
-    display: inline-block;        /* блочний елемент з переносом тексту що не поміщається*/
+    display: inline-block; /* блочний елемент з переносом тексту що не поміщається*/
     text-align: center;
-    text-decoration: none;    /* Отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по умолчанию*/
+    text-decoration: none; /* Отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по умолчанию*/
     flex: 1;
     font-size: 2em;
 }
@@ -51,21 +49,20 @@ header .logo {
 
 .center nav {
     display: inline-block;
+    margin-top: 10pt;
 }
-
 
 .center nav ul {
     list-style-type: none;
     min-width: 150pt;
+    background-color: antiquewhite;
 
 }
 
 .center nav ul li {
     list-style-type: none;
-
-
+    padding: 10pt;
 }
-
 
 .center main {
     display: inline-flex;
@@ -75,26 +72,36 @@ header .logo {
 
 .center main div {
     background-color: aqua;
-    margin: 20pt;
-    flex-basis: 300px;
+    margin: 10pt;
+    padding: 10pt;
+    min-width: 300px;
+    max-width: 300px;
+    flex-basis: auto;
     flex-grow: 1;
-
+    position: relative;
+    text-align: justify;
 }
 
+.center main div::before {
+    top: 10px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 1);
+    -moz-border-radius: 400px / 10px;
+    border-radius: 400px / 10px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.center main div::before, .center main div::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+}
 
 footer {
+    margin-top: 15pt;
 }
 
 footer .first {
@@ -104,7 +111,6 @@ footer .first {
     width: 100%;
     justify-content: space-around;
 }
-
 
 footer .first ul {
     list-style-type: none;
@@ -123,7 +129,6 @@ footer .second .left {
     padding: 1em;
 }
 
-
 footer .second .left ul {
     list-style-type: none;
 }
@@ -135,17 +140,30 @@ footer .second .right ul {
 
 footer .second .right ul li {
     padding: 15pt;
-    display: inline-block;        /* блочний елемент з переносом тексту що не поміщається*/
+    display: inline-block; /* блочний елемент з переносом тексту що не поміщається*/
     text-align: center;
-    text-decoration: none;    /* Отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по умолчанию*/
+    text-decoration: none; /* Отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по умолчанию*/
     flex: 1;
     font-size: 1em;
 }
 
 span.icon-1, span.icon-2, span.icon-3 {
-    background-color: cadetblue;
-    width: 32px;
-    height: 32px;
+    width: 48px;
+    height: 48px;
     display: block;
-    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+span.icon-1 {
+    background-image: url("photo-icon.png");
+}
+
+span.icon-2 {
+    background-image: url("photo-logo.gif");
+}
+
+span.icon-3 {
+    background-image: url("camera-icon.png");
 }
