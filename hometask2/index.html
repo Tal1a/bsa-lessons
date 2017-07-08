@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script language="JavaScript">
+        $(document).on("click", "#top-menu-icon", () => {
+            $("#top-menu").toggleClass("visible");
+            $("#top-menu-icon").toggleClass("open");
+        });
+        $(window).on("scroll touchmove", () => {
+            if ($(window).scrollTop() > 1) {
+                $("header").addClass("fixed");
+            } else {
+                $("header").removeClass("fixed");
+            }
+        });
+    </script>
+    <meta charset="UTF-8">
+    <title>Hometask2</title>
+</head>
+<body>
+<header>
+    <a id="logo" href="#"></a>
+    <a id="top-menu-icon" href="#"></a>
+    <nav id="top-menu">
+        <ul>
+            <li class="selected"><a href="#">Today</a></li>
+            <li><a href="#">Travel News</a> </li>
+            <li><a href="#">Trip Ideas</a></li>
+            <li><a href="#">National parks</a></li>
+        </ul>
+    </nav>
+    <div id="search">
+        <input type="text">
+        <div></div>
+    </div>
+</header>
+
+<div>
+    <div id="screen-1">
+        <nav id="side-menu">
+            <ul>
+                <li><a href="#">
+                    <div class="icon"><img src="icon-1.jpg"></div>
+                    <div class="short-text">16 Places Your Kids Really Want to Stay This Summer</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="icon"><img src="icon-2.jpg"></div>
+                    <div class="short-text">50 Things Your Hotel Will Give You for Free</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="icon"><img src="icon-3.jpg"></div>
+                    <div class="short-text">Theme park workers reveal the secrets they don't want visitors to know</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="icon"><img src="icon-4.jpg"></div>
+                    <div class="short-text">66 Things to Do and See in Paris</div>
+                </a></li>
+                <li><a href="#">
+                    <div class="icon"><img src="icon-5.jpg"></div>
+                    <div class="short-text">5 Cheap Cruise Vacations That Are Perfect for Alleviating Work Burnout</div>
+                </a></li>
+            </ul>
+        </nav>
+        <div id="screen-1-content">
+            <div class="box">
+                <div>
+                    <img src="screen-1-image-1.png">
+                    <p>As many a philosopher has said: It’s not about the destination; it’s the journey. And, honestly,
+                        considering TSA lines and middle row seats, we’re all about taking the long way. So before you
+                        book airfare for your summer trip, consider a no-flight adventure to one of these destinations.
+                        We don’t care what anyone says: Riding around all Hogwarts Express-style will always be better
+                        than
+                        flying coach.</p>
+                </div>
+            </div>
+            <div class="box">
+                <div>
+                    <img src="screen-1-image-2.png">
+                    <p>Live on the coast? Well, chances are you’re within driving distance of a port.
+                        Try a week of sailing from the Northeast into Canada, or travel through the Panama Canal on your
+                        way from New Orleans to Seattle.
+                        West Coasters, let your wanderlust run wild on a month-long cruise from Los Angeles to Sydney
+                        making stops along the way in Hawaii, Samoa and Fiji.
+                        And landlocked folks: There are also river cruises up the Mississippi via steamboat. How
+                        nostalgic is that?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="screen-2">
+        <div id="screen-2-content">
+            <div class="text">If I had known what to put here, I would have done it. Here is just a fox.</div>
+            <div class="animation"><div class="fox"></div></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+
+</footer>
+</body>
+</html>
