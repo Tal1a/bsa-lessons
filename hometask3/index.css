@@ -1,0 +1,57 @@
+body {
+    background-color: aliceblue;
+}
+
+
+#tags {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    text-transform: uppercase;
+    background-color: #C0E8E3;
+    font-weight: 600;
+}
+
+#tags li {
+    cursor: pointer;
+}
+
+#tags .selected {
+    background-color: red;
+    display: inherit;
+}
+
+.article {
+    display: flex;
+    margin-bottom: 10px;
+    height: calc(100vh / 10);
+    min-height: 150px;
+    position: relative;
+}
+
+.article .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+
+}
+
+.article .content .remove {
+    cursor: pointer;
+    background-color: #C0E8E3;
+
+}
+
+.article .image {
+    display: inline-block;
+}
+
+.article .content {
+    display: inline-block;
+    margin-left: 10px;
+    position: relative;
+}
+
+.article .content .tags {
+    position: absolute;
+    bottom: 0;
+}
