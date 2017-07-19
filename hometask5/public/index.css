@@ -1,0 +1,146 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#login {
+    display: block;
+    background-color: #C0E8E3;
+    /*top: calc(100vh - 40px);*/
+    /*left: calc(100vw - 40px);*/
+    flex-direction: column;
+    text-align: justify;
+    height: 40px;
+    line-height: 40px;
+    padding: 20px;
+}
+
+#username, #nickname {
+    border: 1px solid black;
+    width: 140px;
+    height: 32px;
+    font-size: 18px;
+    padding: 3px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#join {
+    border: 1px solid black;
+    height: 38px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;
+    padding: 0 10px;
+}
+
+#chat {
+    display: none;
+}
+
+.show {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#users {
+    display: inline-block;
+    height: 280px;
+    width: 180px;
+    float: left;
+    padding: 10px;
+    background-color: #F1F8E2;
+}
+
+#users .name {
+    display: inline-block;
+    padding-right: 8px;
+}
+
+#users .status {
+    display: inline-block;
+    color: grey;
+    flex: 1 0 50%;
+}
+
+#users .current {
+    font-weight: bold;
+}
+
+#messages {
+    display: inline-block;
+    position: relative;
+    width: 580px;
+    height: 280px;
+    float: right;
+    background-color: #FAFAD2;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 10px;
+    clear: right;
+    flex: 1 0 50%;
+
+}
+
+#typing {
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #E3E3BF;
+    opacity: 0.6;
+}
+
+#messages .sender {
+    color: grey;
+    display: inline-block;
+    padding-right: 10px;
+    background-color: lightgoldenrodyellow;
+}
+
+#messages .text {
+    display: inline-block;
+}
+
+#newMessage {
+    display: inline-block;
+    background-color: lightyellow;
+    flex: 0 1 100%;
+    padding: 10px;
+}
+
+#text {
+    border: 1px solid black;
+    width: 240px;
+    height: 32px;
+    font-size: 18px;
+    padding: 3px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+#send {
+    border: 1px solid black;
+    height: 38px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 40px;
+    padding: 0 10px;
+    background-color: #B7DB6D;
+}
+
