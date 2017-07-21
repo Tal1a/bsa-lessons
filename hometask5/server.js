@@ -54,7 +54,7 @@ module.exports = function (io) {
 
         socket.on('disconnect', function () {
             let user = users.get(socket.username);
-            if (user)
+            if (user) {
                 // видаляти користувача зі списку якщо він offline більше ніж X хвилин
                 user.status = "offline";
                 socket.broadcast.emit('user left', {
