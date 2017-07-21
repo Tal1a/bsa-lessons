@@ -1,0 +1,18 @@
+.users {
+    color: #3F3F3F;
+
+    .user {
+        background-color: #2aabd2;
+        .name {
+            display: inline-block;
+        }
+
+        .avatar {
+            display: inline-block;
+        }
+    }
+}
+
+.flex-test {
+    display: flex;
+}
