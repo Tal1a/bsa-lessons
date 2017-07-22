@@ -1,6 +1,6 @@
 $(function () {
     const socket = io.connect("/");
-    const nicknameByUsername = {};
+    let nicknameByUsername = {};
 
     var myUsername;
     var myNickname;
@@ -13,7 +13,7 @@ $(function () {
 
         myUsername = $('#username').val();
         myNickname = $('#nickname').val();
-        emitAddUser(myUsername);
+        emitAddUser(myUsername, myNickname);
     });
 
     $("#send").click(() => {
@@ -39,7 +39,7 @@ $(function () {
         $('#login').css('display', 'none');
         $('#chat').addClass('show');
         $("#users").empty();
-        $("#messages").empty();
+        $("#messages").find('.message').remove();
         handleNewUser(myUsername, myNickname, 'online');
         users.forEach(user => handleNewUser(user.username, user.nickname, user.status));
         messages.forEach(message => handleNewMessage(message.username, message.text));
@@ -87,8 +87,8 @@ $(function () {
         messages.append(message);
     }
 
-    function emitAddUser(username) {
-        socket.emit('add user', username, nicknameByUsername[username]);
+    function emitAddUser(username, nickname) {
+        socket.emit('add user', username, nickname);
     }
 
     socket.on('joined', function (data) {
@@ -128,7 +128,8 @@ $(function () {
 
     socket.on('reconnect', function () {
         if (myUsername) {
-            emitAddUser(myUsername);
+            nicknameByUsername = {};
+            emitAddUser(myUsername, myNickname);
         }
     });
     //
