@@ -1,0 +1,15 @@
+.user * {
+    padding: 0;
+    margin: 0;
+}
+
+.user {
+    padding: 10px;
+}
+
+.user .username {
+}
+
+.user .delete {
+    margin-left: 10px;
+}
