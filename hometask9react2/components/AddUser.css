@@ -1,0 +1,17 @@
+.add-user * {
+    padding: 0;
+    margin: 0;
+}
+
+.add-user {
+    padding: 10px;
+    margin: 0;
+}
+
+.add-user .username {
+    margin-left: 10px;
+}
+
+.add-user .add {
+    margin-left: 10px;
+}
