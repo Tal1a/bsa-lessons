@@ -34,4 +34,4 @@ function createUser(username) {
     }
 }
 
-var nextUserId = 0;
+let nextUserId = 0;
